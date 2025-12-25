@@ -1,0 +1,403 @@
+﻿cargo :     Checking ttbd v0.1.0 
+(C:\Users\raj97\OneDrive\Desktop\Rust project\ttbd)
+At line:1 char:1
++ cargo check 2>&1 | Out-File -FilePath errors.txt 
+-Encoding utf8; Get- ...
++ ~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (    
+Checking     tt...t project\ttbd):String) [], 
+RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+warning: unused imports: `Add`, `Div`, `Mul`, and `Sub`
+ --> src\core\types.rs:3:16
+  |
+3 | use std::ops::{Add, Sub, Mul, Div};
+  |                ^^^  ^^^  ^^^  ^^^
+  |
+  = note: `#[warn(unused_imports)]` (part of 
+`#[warn(unused)]`) on by default
+
+warning: unused imports: `Memory` and `Stack`
+ --> src\vm\frame.rs:4:17
+  |
+4 | use crate::vm::{Stack, Memory};
+  |                 ^^^^^  ^^^^^^
+
+warning: unused imports: `Address`, `U256`, and 
+`VmResult`
+ --> src\vm\state.rs:3:19
+  |
+3 | use crate::core::{U256, Address, BlockContext, 
+VmResult};
+  |                   ^^^^  ^^^^^^^                
+^^^^^^^^
+
+warning: unused import: `crate::core::U256`
+ --> src\journal\mod.rs:9:5
+  |
+9 | use crate::core::U256;
+  |     ^^^^^^^^^^^^^^^^^
+
+warning: unused import: `std::collections::HashMap`
+  --> src\journal\mod.rs:10:5
+   |
+10 | use std::collections::HashMap;
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused import: `VmError`
+ --> src\debugger\api.rs:3:35
+  |
+3 | use crate::core::{U256, VmResult, VmError, 
+HaltReason};
+  |                                   ^^^^^^^
+
+warning: unused import: `crate::core::U256`
+ --> src\bytecode\decode.rs:4:5
+  |
+4 | use crate::core::U256;
+  |     ^^^^^^^^^^^^^^^^^
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:274:13
+    |
+274 |             Self::Push1..=Self::Push32 => 0,
+    |             -----------^^^------------
+    |             |             |
+    |             |             this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:291:13
+    |
+291 |             Self::Dup1..=Self::Dup16 => {
+    |             ----------^^^-----------
+    |             |            |
+    |             |            this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:294:13
+    |
+294 |             Self::Swap1..=Self::Swap16 => {
+    |             -----------^^^------------
+    |             |             |
+    |             |             this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:310:13
+    |
+310 |             Self::Dup1..=Self::Dup16 => {
+    |             ----------^^^-----------
+    |             |            |
+    |             |            this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:313:13
+    |
+313 |             Self::Swap1..=Self::Swap16 => {
+    |             -----------^^^------------
+    |             |             |
+    |             |             this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:330:15
+    |
+330 |             | Self::Push1..=Self::Push32
+    |               -----------^^^------------
+    |               |             |
+    |               |             this is of type 
+`Opcode` but it should be `char` or numeric
+    |               this is of type `Opcode` but it 
+should be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:331:15
+    |
+331 |             | Self::Dup1..=Self::Dup16
+    |               ----------^^^-----------
+    |               |            |
+    |               |            this is of type 
+`Opcode` but it should be `char` or numeric
+    |               this is of type `Opcode` but it 
+should be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:332:15
+    |
+332 |             | Self::Swap1..=Self::Swap16 => 3,
+    |               -----------^^^------------
+    |               |             |
+    |               |             this is of type 
+`Opcode` but it should be `char` or numeric
+    |               this is of type `Opcode` but it 
+should be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\opcodes.rs:368:13
+    |
+368 |             Self::Push1..=Self::Push32 => (*self 
+as u8 - Self::Push1 as u8 + 1) as usize,
+    |             -----------^^^------------
+    |             |             |
+    |             |             this is of type `Opcode` 
+but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\interpreter.rs:401:13
+    |
+401 |             Opcode::Push1..=Opcode::Push32 => {
+    |             -------------^^^--------------
+    |             |               |
+    |             |               this is of type 
+`Opcode` but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\interpreter.rs:416:13
+    |
+416 |             Opcode::Dup1..=Opcode::Dup16 => {
+    |             ------------^^^-------------
+    |             |              |
+    |             |              this is of type 
+`Opcode` but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\executor\interpreter.rs:423:13
+    |
+423 |             Opcode::Swap1..=Opcode::Swap16 => {
+    |             -------------^^^--------------
+    |             |               |
+    |             |               this is of type 
+`Opcode` but it should be `char` or numeric
+    |             this is of type `Opcode` but it should 
+be `char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+  --> src\bytecode\decode.rs:85:9
+   |
+85 |         Opcode::Push1..=Opcode::Push32 => {
+   |         -------------^^^--------------
+   |         |               |
+   |         |               this is of type `Opcode` 
+but it should be `char` or numeric
+   |         this is of type `Opcode` but it should be 
+`char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+  --> src\bytecode\decode.rs:93:9
+   |
+93 |         Opcode::Dup1..=Opcode::Dup16 => {
+   |         ------------^^^-------------
+   |         |              |
+   |         |              this is of type `Opcode` but 
+it should be `char` or numeric
+   |         this is of type `Opcode` but it should be 
+`char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+  --> src\bytecode\decode.rs:97:9
+   |
+97 |         Opcode::Swap1..=Opcode::Swap16 => {
+   |         -------------^^^--------------
+   |         |               |
+   |         |               this is of type `Opcode` 
+but it should be `char` or numeric
+   |         this is of type `Opcode` but it should be 
+`char` or numeric
+
+error[E0029]: only `char` and numeric types are allowed 
+in range patterns
+   --> src\bytecode\decode.rs:101:9
+    |
+101 |         Opcode::Log0..=Opcode::Log4 => {
+    |         ------------^^^------------
+    |         |              |
+    |         |              this is of type `Opcode` 
+but it should be `char` or numeric
+    |         this is of type `Opcode` but it should be 
+`char` or numeric
+
+warning[E0133]: call to unsafe function 
+`core::slice::<impl [T]>::get_unchecked` is unsafe and 
+requires unsafe block
+   --> src\vm\stack.rs:125:10
+    |
+125 |         *self.data.get_unchecked(self.len)
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to 
+unsafe function
+    |
+    = note: for more information, see <https://doc.rust-l
+ang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.ht
+ml>
+    = note: consult the function's documentation for 
+information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its 
+body is safe by default
+   --> src\vm\stack.rs:123:5
+    |
+123 |     pub unsafe fn pop_unchecked(&mut self) -> U256 
+{
+    |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    = note: `#[warn(unsafe_op_in_unsafe_fn)]` (part of 
+`#[warn(rust_2024_compatibility)]`) on by default
+
+warning[E0133]: call to unsafe function 
+`core::slice::<impl [T]>::get_unchecked` is unsafe and 
+requires unsafe block
+   --> src\vm\stack.rs:134:18
+    |
+134 |         let a = *self.data.get_unchecked(self.len 
+- 1);
+    |                  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe 
+function
+    |
+    = note: for more information, see <https://doc.rust-l
+ang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.ht
+ml>
+    = note: consult the function's documentation for 
+information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its 
+body is safe by default
+   --> src\vm\stack.rs:133:5
+    |
+133 |     pub unsafe fn pop2_unchecked(&mut self) -> 
+(U256, U256) {
+    |     
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning[E0133]: call to unsafe function 
+`core::slice::<impl [T]>::get_unchecked` is unsafe and 
+requires unsafe block
+   --> src\vm\stack.rs:135:18
+    |
+135 |         let b = *self.data.get_unchecked(self.len 
+- 2);
+    |                  
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ call to unsafe 
+function
+    |
+    = note: for more information, see <https://doc.rust-l
+ang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.ht
+ml>
+    = note: consult the function's documentation for 
+information on how to avoid undefined behavior
+
+warning[E0133]: call to unsafe function 
+`core::slice::<impl [T]>::get_unchecked_mut` is unsafe 
+and requires unsafe block
+   --> src\vm\stack.rs:146:10
+    |
+146 |         *self.data.get_unchecked_mut(self.len) = 
+value;
+    |          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ 
+call to unsafe function
+    |
+    = note: for more information, see <https://doc.rust-l
+ang.org/edition-guide/rust-2024/unsafe-op-in-unsafe-fn.ht
+ml>
+    = note: consult the function's documentation for 
+information on how to avoid undefined behavior
+note: an unsafe function restricts its caller, but its 
+body is safe by default
+   --> src\vm\stack.rs:145:5
+    |
+145 |     pub unsafe fn push_unchecked(&mut self, value: 
+U256) {
+    |     
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: unused variable: `steps_forward`
+  --> src\executor\reverse.rs:99:21
+   |
+99 |                 let steps_forward = target_index - 
+checkpoint.instruction_index;
+   |                     ^^^^^^^^^^^^^
+   |
+   = note: `#[warn(unused_variables)]` (part of 
+`#[warn(unused)]`) on by default
+help: if this is intentional, prefix it with an 
+underscore
+   |
+99 |                 let _steps_forward = target_index - 
+checkpoint.instruction_index;
+   |                     +
+help: you might have meant to pattern match on the 
+similarly named constant `MAX_CALL_DEPTH`
+   |
+99 -                 let steps_forward = target_index - 
+checkpoint.instruction_index;
+99 +                 let vm::frame::MAX_CALL_DEPTH = 
+target_index - checkpoint.instruction_index;
+   |
+
+error[E0502]: cannot borrow `*self` as mutable because 
+it is also borrowed as immutable
+  --> src\executor\reverse.rs:97:17
+   |
+93 |         if let Some(checkpoint) = 
+self.journal.find_checkpoint_before(target_index) {
+   |                                   ------------ 
+immutable borrow occurs here
+...
+97 |                 self.restore_from_snapshot(&checkpoi
+nt.state_snapshot.clone());
+   |                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^ mutable borrow occurs here
+98 |                 // Then step forward to target
+99 |                 let steps_forward = target_index - 
+checkpoint.instruction_index;
+   |                                                    
+---------------------------- immutable borrow later used 
+here
+
+error[E0596]: cannot borrow data in a `&` reference as 
+mutable
+   --> src\debugger\api.rs:150:25
+    |
+150 |             result[i] = 
+self.vm.state().memory.load_byte(offset + i);
+    |                         ^^^^^^^^^^^^^^^^^^^^^^ 
+cannot borrow as mutable
+
+Some errors have detailed explanations: E0029, E0133, 
+E0502, E0596.
+For more information about an error, try `rustc 
+--explain E0029`.
+warning: `ttbd` (lib) generated 12 warnings
+error: could not compile `ttbd` (lib) due to 18 previous 
+errors; 12 warnings emitted
