@@ -8,7 +8,7 @@ backward, inspect any historical state—deterministically.
 
 ## Why This Exists
 
-Existing debuggers show you *traces*—corpses of past executions. TTBD gives 
+Existing debuggers show you *traces* corpses of past executions. TTBD gives 
 you a **living VM** that you can scrub back and forth like a video player.
 
 ## Core Innovation
@@ -92,5 +92,5 @@ Research prototype. 13/14 tests passing. Breaks in interesting ways.
 
 ---
 
-*"The best debugger is one that lets you undo your mistakes—including running 
+*"The best debugger is one that lets you undo your mistakes including running 
 the wrong opcode."*
