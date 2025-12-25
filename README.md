@@ -4,7 +4,7 @@
 
 A research grade **reversible virtual machine** for debugging smart contract 
 bytecode with **instruction level time travel**. Execute forward, rewind 
-backward, inspect any historical state—deterministically.
+backward, inspect any historical state deterministically.
 
 ## Why This Exists
 
